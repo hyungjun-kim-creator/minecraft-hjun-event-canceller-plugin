@@ -1,0 +1,11 @@
+name: HjunEventCanceller
+version: '${project.version}'
+main: org.hjun.plugin.hjuneventcanceller.HjunEventCanceller
+api-version: '1.20'
+commands:
+  hjuneventcanceller:
+    description: hjun event canceller default command
+    aliases: [hec, ec]
+  hecconsole:
+    description: hjun event canceller console command
+    aliases: [hecc, ecc]

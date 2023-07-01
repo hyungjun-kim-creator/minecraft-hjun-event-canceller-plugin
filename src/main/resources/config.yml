@@ -1,0 +1,29 @@
+### 1=true  0=false
+
+player-lock: 0
+
+blockplace:
+  all-player: 1
+  specific-player-false:
+  -
+
+blockbreak:
+  all-player: 1
+  specific-player-false:
+  -
+
+teleport:
+  all-player: 1
+  specific-player-false:
+  -
+
+explode:
+  tnt: 0
+  creeper: 0
+  all: 0
+
+spread-event: 0
+
+blockignite-event: 0
+
+allaypoop: 1
