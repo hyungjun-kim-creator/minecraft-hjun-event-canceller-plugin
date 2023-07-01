@@ -54,9 +54,6 @@ public class HECcommand implements CommandExecutor {
     // /hecc lock [true, false] - 플레이어들이 명령어로 해당 플러그인의 설정을 변경하는 것을 [true, false] - console에서만 사용 가능 0
     // /hecc reload - config.yml 설정 불러오기 <- 설정 기능을 넣어 더 많은 변수를 선택적으로 불러올 수 있게 하기
     //
-    // allay poop
-    // /hec allaypoop [true, false] - 알레이가 아이템을 줄때 '똥'을 주는 것을 [true, false]
-    //
     // sp = specific player
     //
     // https://cchplugin.tistory.com/9 config.yml 참조하기
@@ -344,33 +341,6 @@ public class HECcommand implements CommandExecutor {
                                 sender.sendMessage("§e/" + label + " help §f도움말을 표시합니다.");
                             }
                         } else if (sender.isOp() == false) {
-                            sender.sendMessage("관리자 권한(op)가 없어서 해당 명령어 입력이 불가능합니다.");
-                        }
-                    }
-                    //allaypoop
-                    else if(args[0].equals("allaypoop")){
-                        if (args.length == 1) {
-                            if (allaypoop == 1) {
-                                sender.sendMessage("현재 알레이가 플레이어에게 똥만 줍니다.");
-                            } else if (allaypoop == 0) {
-                                sender.sendMessage("현재 알레이가 플레이어에게 똥을 주지 않습니다.");
-                            }
-                        }
-                        else if (sender.isOp()) {
-                            if (args[1].equals("true")) {
-                                allaypoop = 1;
-                                sender.sendMessage("지금부터 알레이가 플레이어에게 똥만 줍니다.");
-                            }
-                            else if (args[1].equals("false")) {
-                                allaypoop = 0;
-                                sender.sendMessage("지금부터 알레이가 플레이어에게 똥을 주지 않습니다.");
-                            }
-                            else {
-                                sender.sendMessage("명령어 입력이 잘못되었습니다.");
-                                sender.sendMessage("§e/" + label + " help §f도움말을 표시합니다.");
-                            }
-                        }
-                        else if (sender.isOp() == false) {
                             sender.sendMessage("관리자 권한(op)가 없어서 해당 명령어 입력이 불가능합니다.");
                         }
                     }

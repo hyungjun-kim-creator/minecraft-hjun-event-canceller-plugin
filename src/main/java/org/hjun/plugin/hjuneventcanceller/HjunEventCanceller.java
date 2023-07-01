@@ -35,9 +35,6 @@ public final class HjunEventCanceller extends JavaPlugin {
     List<String> spteleportlist = new ArrayList<String>();
     // 1 = true, 0 = false
 
-    //for allaypoop
-    public static int Allay = 0;
-    public static int allaypoop = 0;
     @Override
     public void onEnable() {
         Bukkit.getPluginManager().registerEvents(new HECevent(), this);
@@ -63,7 +60,6 @@ public final class HjunEventCanceller extends JavaPlugin {
         explode = getConfig().getInt("explode.all");
         spreadevent = getConfig().getInt("spread-event");
         blockignite = getConfig().getInt("blockignite-event");
-        allaypoop = getConfig().getInt("allaypoop");
     }
 
     @Override

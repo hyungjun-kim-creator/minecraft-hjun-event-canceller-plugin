@@ -161,31 +161,4 @@ public class HECevent implements Listener {
             getServer().broadcastMessage(ChatColor.DARK_RED + "현재 블럭 연소 이벤트가 허용되어 있지 않습니다.");
         }
     }
-
-
-
-    @EventHandler
-    public void allaypoopentitydrop(EntityDropItemEvent e){
-        if(allaypoop == 1) {
-            if (String.valueOf(e.getEntity()).equals("CraftAllay")) {
-                Allay = 1;
-            }
-        }
-    }
-
-    @EventHandler
-    public void allaypoopitemspawn(ItemSpawnEvent e){
-        if(allaypoop == 1) {
-            if (Allay == 1) {
-                Allay = 0;
-                Item it = e.getEntity();
-                ItemStack poop = new ItemStack(BROWN_DYE);
-                ItemMeta poopmeta = poop.getItemMeta();
-                poopmeta.setDisplayName(ChatColor.of("#825432") + ChatColor.BOLD.toString() + "똥");
-                poop.setItemMeta(poopmeta);
-                it.setItemStack(poop);
-                e.getLocation().getWorld().playSound(e.getLocation(), BLOCK_HONEY_BLOCK_SLIDE, 50.0F, 0.5F);
-            }
-        }
-    }
 }
