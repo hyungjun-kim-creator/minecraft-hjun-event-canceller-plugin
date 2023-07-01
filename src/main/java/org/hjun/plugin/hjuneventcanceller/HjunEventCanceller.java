@@ -68,6 +68,17 @@ public final class HjunEventCanceller extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
+        spblockplacelist.addAll(spblockplace);
+        getConfig().set("blockplace.specific-player-false", spblockplacelist);
+
+        spblockbreaklist.addAll(spblockbreak);
+        getConfig().set("blockbreak.specific-player-false", spblockbreaklist);
+
+        spteleportlist.addAll(sptphashset);
+        getConfig().set("teleport.specific-player-false", spteleportlist);
+
+        saveDefaultConfig();
+
+        logger.info("[EventCanceller] Hjun Event Canceller has stoped!");
     }
 }
