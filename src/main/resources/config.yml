@@ -22,6 +22,6 @@ explode:
   creeper: 0
   all: 0
 
-spread-event: 0
+spread-event: 1
 
-blockignite-event: 0
+blockignite-event: 1
