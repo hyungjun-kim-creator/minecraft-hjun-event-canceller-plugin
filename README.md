@@ -2,6 +2,7 @@
 hjun's minecraft event canceller plugin
 
 //계획
+
     azure 서버의 paperconfig에 player 충돌 허용하기
 		
     /hec tp sp <- 정상 작동하는지 체크
