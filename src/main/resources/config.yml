@@ -18,9 +18,9 @@ teleport:
   -
 
 explode:
-  tnt: 0
-  creeper: 0
-  all: 0
+  tnt: 1
+  creeper: 1
+  all: 1
 
 spread-event: 1
 
